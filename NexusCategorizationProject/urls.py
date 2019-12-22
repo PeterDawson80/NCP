@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import text_query.views
+import customer_relationship_management.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',text_query.views.contact, name='contact'),
-    path('',dashboard.views.dashboard, name='dashboard'),
+    path('contact/',text_query.views.Contact, name='contact'),
+    path('dashboard/',customer_relationship_management.views.Dashboard, name='dashboard'),
 ]
