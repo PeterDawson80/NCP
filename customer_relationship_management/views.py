@@ -9,4 +9,4 @@ def Dashboard(request):
 
 def detail(request, query_id):
     query_detail = get_object_or_404(Query, pk=query_id)
-    return render(request, 'customer_relationship_management/detail.html', {'query':query_detail})
+    return render (request, 'detail.html', {'query':query_detail})

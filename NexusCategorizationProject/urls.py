@@ -23,5 +23,5 @@ urlpatterns = [
     path('',text_query.views.Contact, name='contact'),
     path('admin/', admin.site.urls),
     path('dashboard/',customer_relationship_management.views.Dashboard, name='dashboard'),
-    path('dashboard/<int:query_id>/', customer_relationship_management.views.detail, name='detail'),
+    path('dashboard/<int:query_id>/', customer_relationship_management.views.detail, name='query_detail'),
 ]
