@@ -1,5 +1,6 @@
 from django.db import models
 
+# Create your models here.
 class Query(models.Model):
         id = models.AutoField(primary_key=True)
         email = models.EmailField(max_length=70,blank=True)
@@ -22,5 +23,8 @@ class Query(models.Model):
         body = models.TextField(max_length=2000)
         datetime = models.DateTimeField(auto_now_add=True, blank=True)
 
+        def summary(self):
+            return self.body[:50]
 
-# Create your models here.
+        def date_only(self):
+            return self.datetime.strftime('%b %e %Y')    
