@@ -82,7 +82,6 @@ DATABASES = {
         'PASSWORD': 'Texas#33',
         'HOST': 'localhost',
         'PORT': '5432',
-
     }
 }
 
