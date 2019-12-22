@@ -20,4 +20,5 @@ import text_query.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',text_query.views.contact, name='contact'),
+    path('',dashboard.views.dashboard, name='dashboard'),
 ]
