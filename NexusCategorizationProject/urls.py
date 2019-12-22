@@ -19,6 +19,7 @@ import text_query.views
 import customer_relationship_management.views
 
 urlpatterns = [
+    path('', text_query.views.Home, name='home'),
     path('admin/', admin.site.urls),
     path('contact/',text_query.views.Contact, name='contact'),
     path('dashboard/',customer_relationship_management.views.Dashboard, name='dashboard'),
