@@ -16,12 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 import text_query.views
 import customer_relationship_management.views
 
 urlpatterns = [
-    path('',text_query.views.Contact, name='contact'),
+    path('',text_query.views.Home, name='home'),
+    path('contact/',text_query.views.Contact, name='contact'),
     path('admin/', admin.site.urls),
     path('dashboard/',customer_relationship_management.views.Dashboard, name='dashboard'),
     path('dashboard/<int:query_id>/', customer_relationship_management.views.detail, name='query_detail'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
