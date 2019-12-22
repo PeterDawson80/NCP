@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'text_query.apps.TextQueryConfig',
+    'customer_relationship_management.apps.CustomerRelationshipManagementConfig',
 ]
 
 MIDDLEWARE = [
