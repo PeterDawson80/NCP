@@ -19,7 +19,7 @@ class Query(models.Model):
             max_length=20,
             choices = CATEGORY_CHOICES
         )
-        body = models.CharField(max_length=2000)
+        body = models.TextField(max_length=2000)
         datetime = models.DateTimeField(auto_now_add=True, blank=True)
 
 
