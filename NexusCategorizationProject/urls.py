@@ -25,6 +25,7 @@ import customer_relationship_management.views
 urlpatterns = [
     path('',text_query.views.Home, name='home'),
     path('contact/',text_query.views.Contact, name='contact'),
+    path('count/',text_query.views.count, name='count'),
     path('admin/', admin.site.urls),
     path('dashboard/',customer_relationship_management.views.Dashboard, name='dashboard'),
     path('dashboard/<int:query_id>/', customer_relationship_management.views.detail, name='query_detail'),

@@ -15,7 +15,12 @@
 </head>
 
 <body>
-  Contact Form
+  <h1>Nexus Contact</h1>
+  <form action="{% url 'count'%}">
+    <textarea name="fulltext" rows="8" cols="80"></textarea>
+    <br/><br/>
+    <input type="submit" value="Count!">
+  </form>
 </body>
 
 </html>
